@@ -5,7 +5,7 @@ import '../../support/commandsEventos'
 describe('Gerenciar Eventos', () => {
     before(() => {
         // parâmetros: email, senha
-        cy.login('teste.devadv02@yopmail.com', '@Salve2021')
+        cy.login('teste.devadv02@yopmail.com', 'S@lve2021')
     })
 
     after(() => {
@@ -14,7 +14,7 @@ describe('Gerenciar Eventos', () => {
 
     it("Cria eventos", () => {
         // parâmetro: quantidade de eventos que irá criar
-        cy.criaEvento(10)
+        cy.criaEvento(5)
     });
 
 
@@ -35,6 +35,6 @@ describe('Gerenciar Eventos', () => {
             ele executará selecionará os 5 eventos e excluirá,
             o processo será executado 2x deletando 10 eventos
         */
-        cy.deletaEvento(2, 5)
+        cy.deletaEvento(1, 5)
     })
 });

@@ -24,13 +24,12 @@ Cypress.Commands.add('criaEvento', (quantidade) => {
         cy.contains('Assessoria parcial').click();
         cy.get(loc.EVENTO.NOME).type('Cypress ' + nome).should('have.value', 'Cypress ' + nome);
         cy.get(loc.EVENTO.LOCAL).type('Rua ' + local + ', ' + numero).should('have.value', 'Rua ' + local + ', ' + numero);
-        cy.get(loc.EVENTO.CADASTRAR).submit();
+        cy.get(loc.EVENTO.CADASTRAR).click();
         cy.wait(1000)
     }
 })
 
 Cypress.Commands.add('deletaEvento', (ciclos, quantidade) => {
-    cy.get(loc.MENU.HOME).click();
     cy.get(loc.MENU.EVENTOS).click();
     cy.wait(1500)
 
