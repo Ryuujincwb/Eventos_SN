@@ -5,7 +5,7 @@ import '../../support/commandsEventos'
 describe('Gerenciar Eventos', () => {
     before(() => {
         // parâmetros: email, senha
-        cy.login('teste.pevedev@yopmail.com', 'salve2021')
+        cy.login('teste.devadv01@yopmail.com', '@Salve2021')
     })
 
     after(() => {
